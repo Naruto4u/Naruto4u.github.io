@@ -1,14 +1,5 @@
-.main-text {
-  font-size: 50px;
-  text-align: center;
-  padding: 20px;
-}
-
-.main-field {
-  display: flex;
+body {
   background-color: rgb(105, 60, 177);
-  height: 100vh;
-  
 }
 
 hr {
@@ -18,24 +9,37 @@ hr {
   border-width: 2px;
 }
 
-.github-link {
-  color: blue;
-  text-align: center;
-  margin-top: auto;
+.main-field {
+  display: flex;
+
+  height: 100vh;
+  padding: 10px;
 }
 
-.github-link:hover {
-  color: black;
-  margin-top: auto;
+.main-text {
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
 }
 
 .sidebar {
   background-color: whitesmoke;
   width: 290px;
-  height: 100%;
+  height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align items at the top */
   padding: 10px;
-  position:fixed;
+  position: fixed; /* Keep sidebar fixed */
+}
+
+.github-link {
+  color: blue;
+  text-align: center;
+  margin-top: auto; /* Push the link to the bottom */
+  padding: 25px; /* Add spacing around the link */
+}
+
+.github-link:hover {
+  color: black;
 }
