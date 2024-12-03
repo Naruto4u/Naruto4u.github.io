@@ -1,8 +1,34 @@
-.main-text {font-size: 50px; text-align: center;}
-.main-field {background-color:rgb(105, 60, 177);}
+.main-text {
+            font-size: 50px;
+            text-align: center;
+            padding:20px
+}
 
-hr {height: 10px; background-color:navy;
-border-color: navy;
-border-width: 2px;}
-.github-link {color:rgb(178, 177, 177);}
-.github-link:hover {color:black}
+.main-field {
+              display:flex;
+              background-color:rgb(105, 60, 177);
+              height:100vh;
+}
+
+hr {
+    height: 10px; background-color:navy;
+    border-color: navy;
+    border-width: 2px;
+}
+
+.github-link {
+  color:blue;
+  text-align:center;
+  margin-top:auto;
+}
+.github-link:hover {color:black;
+margin-top:auto}
+.sidebar {
+          background-color:whitesmoke;
+          width:290px;
+          height:100%;
+          display:flex;
+          flex-direction:column;
+          justify-content:space-between;
+          padding:10px
+}
