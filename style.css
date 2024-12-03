@@ -13,8 +13,6 @@ hr {
 }
 
 .main-field {
-  display: flex;
-
   height: 100vh;
   padding: 10px;
 }
@@ -27,10 +25,9 @@ hr {
 
 .sidebar {
   background-color: whitesmoke;
-  width: 290px;
+  /* width:; */
   height: 100vh; /* Full viewport height */
   display: flex;
-  flex-direction: column;
   justify-content: flex-start; /* Align items at the top */
   padding: 10px;
   position: fixed; /* Keep sidebar fixed */
@@ -46,3 +43,6 @@ hr {
 .github-link:hover {
   color: black;
 }
+button {
+max-height:20%;
+max-width:50px}
