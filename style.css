@@ -1,2 +1,8 @@
+.main-text {font-size: 50px; text-align: center;}
+.main-field {background-color:rgb(105, 60, 177);}
 
-.main-field {background-color:darkgrey;width:200px;height:400px}
+hr {height: 10px; background-color:navy;
+border-color: navy;
+border-width: 2px;}
+.github-link {color:rgb(178, 177, 177);}
+.github-link:hover {color:black}
