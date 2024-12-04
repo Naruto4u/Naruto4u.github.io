@@ -11,16 +11,28 @@ hr {
   border-color: navy;
   border-width: 2px;
 }
-
+.main-box {
+  max-height:20%;
+  max-width:80%;
+  background-color:white;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+  padding-top:100px;
+  display:flex
+}
 .main-field {
   height: 100vh;
-  padding: 10px;
-}
+  margin-top:-125px;
+  margin-right:auto;
+  margin-left:auto;
+  
+  }
 
 .main-text {
   font-size: 50px;
   text-align: center;
-  padding: 20px;
 }
 
 .sidebar {
