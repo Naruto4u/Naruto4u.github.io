@@ -1,3 +1,3 @@
 # [The website](https://naruto4u.github.io)
-## A simple webstie in progress, for helping me learn HTML and CSS
+## Crazy court case btw, gotta admit, the coding was harder..
 
