@@ -1,8 +1,10 @@
-body {
-  background-color: rgb(105, 60, 177);
-  height:100vh;
+html, body {
+  background: linear-gradient(to bottom, rgb(105, 60, 177),black);
+  overflow:hidden;
+  height:100%;
   width:100%;
   margin:0;
+  padding:0;
 }
 
 hr {
@@ -12,16 +14,13 @@ hr {
   border-width: 2px;
 }
 .main-box {
-  max-height:20%;
-  max-width:80%;
+  max-height:100%;
+  max-width:70%;
   background-color:white;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:auto;
-  margin-bottom:auto;
+  margin:auto;
   padding-top:100px;
-  display:flex
 }
+.main-box hr {max-width: 80%}
 .main-field {
   height: 100vh;
   margin-top:-125px;
@@ -36,25 +35,34 @@ hr {
 }
 
 .sidebar {
-  background-color: whitesmoke;
-  /* width:; */
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  justify-content: flex-start; /* Align items at the top */
+  background-color: #333333;
+  color:white;
+  height: 100vh;
+  width:176px;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
   padding: 10px;
-  position: fixed; /* Keep sidebar fixed */
+  position: fixed;
+  overflow:hidden;
 }
 
 .github-link {
-  color: blue;
+  color: lightblue;
   text-align: center;
-  margin-top: auto; /* Push the link to the bottom */
-  padding: 25px; /* Add spacing around the link */
+  margin-top: auto;
+  padding: 25px;
 }
 
-.github-link:hover {
+.github-link:hover, .source-link:hover {
   color: black;
 }
 button {
-max-height:20%;
-max-width:50px}
+  position:absolute;
+  top:10px;
+  right:10px;
+  max-height:20%;
+  max-width:50px
+}
+.sidebar h2 {margin-top:70px}
+.source-link {font-size: 20px;color:lightskyblue;padding:10px}
