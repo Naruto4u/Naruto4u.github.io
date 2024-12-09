@@ -8,19 +8,19 @@ html, body {
 }
 
 hr {
-  height: 10px;
+  height: 4px;
   background-color: navy;
   border-color: navy;
   border-width: 2px;
+  max-width:90%
 }
 .main-box {
   max-height:100%;
-  max-width:70%;
+  max-width:60%;
   background-color:white;
   margin:auto;
   padding-top:100px;
 }
-.main-box hr {max-width: 80%}
 .main-field {
   height: 100vh;
   margin-top:-125px;
@@ -33,6 +33,7 @@ hr {
   font-size: 50px;
   text-align: center;
 }
+.main-paragraph {text-indent:40px;}
 
 .sidebar {
   background-color: #333333;
