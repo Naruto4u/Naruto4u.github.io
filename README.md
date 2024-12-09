@@ -1,3 +1,3 @@
 # [The website](https://naruto4u.github.io)
-## Crazy court case btw, gotta admit, the coding was harder..
+## Crazy court case btw, imagine burning a flag and getting away with it.
 
