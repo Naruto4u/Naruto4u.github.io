@@ -4,7 +4,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: auto; /* Enable scrolling */
+  overflow: auto;
 }
 
 hr {
@@ -16,7 +16,8 @@ hr {
 }
 
 .main-box {
-  max-width: 60%;
+  min-height:100%;
+  max-width: 50%;
   background-color: white;
   margin: auto;
   padding-top: 100px;
@@ -26,7 +27,8 @@ hr {
   margin-top: -125px;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 10px; /* Add spacing at the bottom */
+  padding-bottom: 10px;
+  min-height:100vh;
 }
 
 .main-text {
@@ -89,3 +91,4 @@ button {
   color: lightskyblue;
   padding: 10px;
 }
+footer {padding:10px;text-align:center;color:white;font-size:17px}
