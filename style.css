@@ -36,11 +36,6 @@ hr {
   text-align: center;
 }
 
-.lead-text {
-  margin-left: 10px;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
 
 .main-paragraph {
   text-indent: 40px;
@@ -86,9 +81,4 @@ button {
   margin-top: 70px;
 }
 
-.source-link {
-  font-size: 20px;
-  color: lightskyblue;
-  padding: 10px;
-}
 footer {padding:10px;text-align:center;color:white;font-size:17px}
