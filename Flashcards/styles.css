@@ -12,12 +12,16 @@ h1 {
     margin: 20px 0;
 }
 
+/* Flashcard Container */
+
 .flashcard-container {
     display:flex;
     justify-content:center;
     align-items:center;
     margin-top: 20px
 }
+
+/* Flashcard Styling */
 
 .flashcard {position:relative;
     width: 200px;
@@ -37,14 +41,23 @@ h1 {
     transition:transform 0.6s;
 }
 
+/* Front Side */
+
 .card-front {background:#4caf50;
     color:white;
 }
+
+/* Back Side */
 
 .card-back {background:#2196f3;
 color:white;
 transform:rotateY(180deg);
 }
 
+/* Flips to front */
 .flashcard.flipped .card-front {transform:rotateY(0deg);
+}
+
+/* Flips to back */
+.flashcard.flipped .card-back {transform:rotateY(0deg);
 }
