@@ -1,5 +1,5 @@
 // Select the flashcard
-cont flashcard = document.querySelector('.flashcard');
+const flashcard = document.querySelector('.flashcard');
 
 //Add a click event listener to the flashcard
 .addEventListener('click', function() {
