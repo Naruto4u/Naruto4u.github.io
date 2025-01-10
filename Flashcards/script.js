@@ -70,22 +70,23 @@ document.getElementById('next-btn').addEventListener('click', function () {
   renderFlashcard(currentIndex);
 });
 
-// Shuffle flashcards
+// Function to shuffle flashcards
 function shuffleFlashcards() {
   for (let i = flashcardsData.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [flashcardsData[i], flashcardsData[j]] = [flashcardsData[j], flashcardsData[i]];
   }
-  currentIndex = 0;
-  renderFlashcard(currentIndex);
+  currentIndex = 0; // Reset to the first card
+  renderFlashcard(currentIndex); // Render the first card
+  populateDropdown(); // Update dropdown to match the new order
 }
 
 document.getElementById('shuffle-btn').addEventListener('click', shuffleFlashcards);
 
-// Populate dropdown menu
+// Populate dropdown menu with mini flashcards
 function populateDropdown() {
   const dropdownMenu = document.getElementById('dropdown-menu');
-  dropdownMenu.innerHTML = '';
+  dropdownMenu.innerHTML = ''; // Clear existing mini cards
 
   flashcardsData.forEach((card, index) => {
     const miniCard = document.createElement('div');
@@ -102,7 +103,7 @@ function populateDropdown() {
   });
 }
 
-// Toggle dropdown
+// Toggle dropdown menu visibility
 function toggleDropdown() {
   const dropdownMenu = document.getElementById('dropdown-menu');
   dropdownMenu.classList.toggle('visible');
@@ -110,4 +111,5 @@ function toggleDropdown() {
 
 document.getElementById('dropdown-btn').addEventListener('click', toggleDropdown);
 
+// Populate the dropdown menu initially
 populateDropdown();
