@@ -1,31 +1,15 @@
 // Flashcard data
 const flashcardsData = [
-  { front: "Klein", back: "Small" },
-  { front: "das Kind", back: "the Child" },
-  { front: "Sein", back: "to be" },
-  { front: "das Buch", back: "the Book" },
-  { front: "groß", back: "Big" },
-  { front: "schreiben", back: "to Write" },
-  { front: "gut", back: "Good" },
-  { front: "die Schwester", back: "the Sister" },
-  { front: "leben", back: "to Live" },
-  { front: "das Auto", back: "the Car" },
-  { front: "die Mutter", back: "the Mother" },
-  { front: "die Schule", back: "the School" },
-  { front: "sehen", back: "to See" },
-  { front: "lesen", back: "to Read" },
-  { front: "der Bruder", back: "the Brother" },
-  { front: "der Vater", back: "the Father" },
-  { front: "lernen", back: "to Learn" },
-  { front: "schlecht", back: "Bad" },
-  { front: "haben", back: "to Have" },
-  { front: "die Familie", back: "the Family" },
-  { front: "essen", back: "to Eat" },
-  { front: "arbeiten", back: "to Work" },
-  { front: "gehen", back: "to Go" },
-  { front: "die Faru", back: "the Woman" },
-  { front: "sagen", back: "to Say" },
-  { front: "der Mann", back: "the Man" }
+  { front: "Klein", back: "Small", isWrong: false },
+  { front: "das Kind", back: "the Child", isWrong: false },
+  { front: "Sein", back: "to be", isWrong: false },
+  { front: "das Buch", back: "the Book", isWrong: false },
+  { front: "groß", back: "Big", isWrong: false },
+  { front: "schreiben", back: "to Write", isWrong: false },
+  { front: "gut", back: "Good", isWrong: false },
+  { front: "die Schwester", back: "the Sister", isWrong: false },
+  { front: "leben", back: "to Live", isWrong: false },
+  { front: "das Auto", back: "the Car", isWrong: false }
 ];
 
 let currentIndex = 0; // Track the current flashcard
@@ -37,6 +21,9 @@ function renderFlashcard(index) {
 
   const flashcard = document.createElement('div');
   flashcard.classList.add('flashcard');
+  if (flashcardsData[index].isWrong) {
+    flashcard.classList.add('wrong'); // Highlight wrong cards
+  }
 
   const cardFront = document.createElement('div');
   cardFront.classList.add('card-front');
@@ -76,14 +63,23 @@ function shuffleFlashcards() {
     const j = Math.floor(Math.random() * (i + 1));
     [flashcardsData[i], flashcardsData[j]] = [flashcardsData[j], flashcardsData[i]];
   }
-  currentIndex = 0; // Reset to the first card
-  renderFlashcard(currentIndex); // Render the first card
-  populateDropdown(); // Update dropdown to match the new order
+  currentIndex = 0;
+  renderFlashcard(currentIndex);
+  populateDropdown();
 }
 
 document.getElementById('shuffle-btn').addEventListener('click', shuffleFlashcards);
 
-// Populate dropdown menu with mini flashcards
+// Function to mark the current card as wrong
+function markAsWrong() {
+  flashcardsData[currentIndex].isWrong = !flashcardsData[currentIndex].isWrong; // Toggle wrong status
+  renderFlashcard(currentIndex);
+  populateDropdown();
+}
+
+document.getElementById('mark-wrong-btn').addEventListener('click', markAsWrong);
+
+// Populate dropdown menu
 function populateDropdown() {
   const dropdownMenu = document.getElementById('dropdown-menu');
   dropdownMenu.innerHTML = ''; // Clear existing mini cards
@@ -92,6 +88,10 @@ function populateDropdown() {
     const miniCard = document.createElement('div');
     miniCard.classList.add('mini-card');
     miniCard.textContent = card.front;
+
+    if (card.isWrong) {
+      miniCard.classList.add('wrong'); // Highlight wrong cards
+    }
 
     miniCard.addEventListener('click', () => {
       currentIndex = index;
