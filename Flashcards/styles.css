@@ -54,10 +54,17 @@ h1 {
   transform: rotateY(180deg);
 }
 
-/* Highlight wrong flashcards with a red border */
-.flashcard.wrong {
-  border: 3px solid #f44336; /* Red border */
+/* Flashcard fully turns red when marked as wrong */
+.flashcard.wrong .card-front {
+  background: #f44336; /* Red color */
+  color: white; /* Ensure text remains visible */
 }
+
+.flashcard.wrong .card-back {
+  background: #f44336; /* Red color */
+  color: white; /* Ensure text remains visible */
+}
+
 
 /* Flip to back */
 .flashcard.flipped .card-front {

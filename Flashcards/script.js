@@ -9,7 +9,23 @@ const flashcardsData = [
   { front: "gut", back: "Good", isWrong: false },
   { front: "die Schwester", back: "the Sister", isWrong: false },
   { front: "leben", back: "to Live", isWrong: false },
-  { front: "das Auto", back: "the Car", isWrong: false }
+  { front: "das Auto", back: "the Car", isWrong: false },
+  { front: "die Mutter", back: "the Mother", isWrong: false },
+  { front: "die Schule", back: "the School", isWrong: false },
+  { front: "sehen", back: "to See", isWrong: false },
+  { front: "lesen", back: "to Read", isWrong: false },
+  { front: "der Bruder", back: "the Brother", isWrong: false },
+  { front: "der Vater", back: "the Father", isWrong: false },
+  { front: "lernen", back: "to Learn", isWrong: false },
+  { front: "schlecht", back: "Bad", isWrong: false },
+  { front: "haben", back: "to Have", isWrong: false },
+  { front: "die Familie", back: "the Family", isWrong: false },
+  { front: "essen", back: "to Eat", isWrong: false },
+  { front: "arbeiten", back: "to Work", isWrong: false },
+  { front: "gehen", back: "to Go", isWrong: false },
+  { front: "die Faru", back: "the Woman", isWrong: false },
+  { front: "sagen", back: "to Say", isWrong: false },
+  { front: "der Mann", back: "the Man", isWrong: false }
 ];
 
 let currentIndex = 0; // Track the current flashcard
@@ -22,7 +38,7 @@ function renderFlashcard(index) {
   const flashcard = document.createElement('div');
   flashcard.classList.add('flashcard');
   if (flashcardsData[index].isWrong) {
-    flashcard.classList.add('wrong'); // Highlight wrong cards
+    flashcard.classList.add('wrong'); // Add 'wrong' class if marked as wrong
   }
 
   const cardFront = document.createElement('div');
@@ -90,7 +106,7 @@ function populateDropdown() {
     miniCard.textContent = card.front;
 
     if (card.isWrong) {
-      miniCard.classList.add('wrong'); // Highlight wrong cards
+      miniCard.classList.add('wrong'); // Highlight wrong cards in dropdown
     }
 
     miniCard.addEventListener('click', () => {
