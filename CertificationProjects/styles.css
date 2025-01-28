@@ -1,0 +1,41 @@
+* {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+html {
+  background:linear-gradient(to bottom,darkblue 5%, lightblue 90%, rgb(206, 206, 206) 100%);
+  width: 100vw;
+  height:100vh;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+body {
+    height:95%;
+    width:95%;
+    background-color:rgb(173, 173, 173);
+    margin:14px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+}
+
+body div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:200px;
+    width:200px;
+    margin:30px;
+    background-color:lightblue;
+}
+
+body div img {
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
