@@ -31,11 +31,13 @@ body div {
     height:200px;
     width:200px;
     margin:30px;
-    background-color:lightblue;
+    border-radius: 25px;
 }
 
 body div img {
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
 }
