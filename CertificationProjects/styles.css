@@ -1,6 +1,6 @@
 * {
     border: 1px solid black;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 html {
@@ -34,6 +34,13 @@ body div {
     border-radius: 25px;
 }
 
+body div a {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
 body div img {
     width: 100%;
     max-width: 350px;
