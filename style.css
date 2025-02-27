@@ -74,7 +74,7 @@ hr {
 .main-paragraph {
   text-indent: 40px;
   padding: 50px;
-  margin-top: 5px;
+  margin-top: 0px;
   line-height:1.7;
   white-space: pre-line;
   text-align:center;
@@ -92,6 +92,11 @@ hr {
   position: fixed;
   overflow: hidden;
 }
+nav a {color:white;
+  margin-bottom: 10px;
+  display:block;
+text-align:center;
+text-decoration:none;}
 
 .github-link {
   color: lightblue;
