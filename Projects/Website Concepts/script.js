@@ -9,7 +9,7 @@ let posY = 0;
 let velocityY = 0;
 let velocityX = 0;
 const gravity = 0.7;
-const jumpStrength = -25;
+const jumpStrength = -15;
 const moveSpeed = 0.8;
 const friction = 0.9;
 let isJumping = false;
@@ -160,7 +160,7 @@ function updateCharacter() {
     }
 
     // Update character position
-    character.style.transform = `translate(${posX - 100}px, ${posY}px)`;
+    character.style.transform = `translate(${posX -100}px, ${posY}px)`;
 
     // Update camera position
     updateCamera();
