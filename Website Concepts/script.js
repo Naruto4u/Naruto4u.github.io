@@ -38,54 +38,36 @@ function checkPlatformCollisions() {
 
     platforms.forEach(platform => {
         // Get platform position and dimensions
-        const platformLeft = parseInt(platform.style.left) || 0;
-        const platformTop = parseInt(platform.style.top) || 0;
-        const platformWidth = parseInt(platform.style.width) || platform.offsetWidth;
-        const platformHeight = parseInt(platform.style.height) || platform.offsetHeight;
+        const platformLeft = parseFloat(platform.style.left) || 0;
+        const platformTop = parseFloat(platform.style.top) || 0;
+        const platformWidth = parseFloat(platform.style.width) || platform.offsetWidth;
+        const platformHeight = parseFloat(platform.style.height) || platform.offsetHeight;
 
-        // Current character position (not predicted)
+        // Current character position
         const characterLeft = posX;
         const characterRight = posX + character.clientWidth;
         const characterTop = posY;
         const characterBottom = posY + character.clientHeight;
 
-        // Check collisions
-        if (characterRight > platformLeft && 
-            characterLeft < platformLeft + platformWidth && 
-            characterBottom > platformTop && 
-            characterTop < platformTop + platformHeight) {
+        // Check if the character is within the platform's horizontal bounds
+        const isWithinHorizontalBounds = characterRight > platformLeft && characterLeft < platformLeft + platformWidth;
 
-            // Calculate overlap on each axis
-            const overlapLeft = characterRight - platformLeft;
-            const overlapRight = (platformLeft + platformWidth) - characterLeft;
-            const overlapTop = characterBottom - platformTop;
-            const overlapBottom = (platformTop + platformHeight) - characterTop;
+        // Check if the character is landing on the platform
+        const isLandingOnPlatform = characterBottom >= platformTop && characterBottom <= platformTop + velocityY;
 
-            // Find smallest overlap to determine collision direction
-            const minOverlap = Math.min(overlapLeft, overlapRight, overlapTop, overlapBottom);
+        // Check if the character is falling
+        const isFalling = velocityY >= 0;
 
-            if (minOverlap === overlapTop) {
-                // Collision from above - land on platform
-                posY = platformTop - character.clientHeight;
-                velocityY = 0;
-                isJumping = false;
-                onPlatform = true;
-            }
-            else if (minOverlap === overlapBottom) {
-                // Collision from below - hit head
-                posY = platformTop + platformHeight;
-                velocityY = 0;
-            }
-            else if (minOverlap === overlapLeft) {
-                // Collision from left
-                posX = platformLeft - character.clientWidth;
-                velocityX = 0;
-            }
-            else if (minOverlap === overlapRight) {
-                // Collision from right
-                posX = platformLeft + platformWidth;
-                velocityX = 0;
-            }
+        // Skip collision detection if the "down" key is pressed and the character is above the platform
+        if (keys.down && isWithinHorizontalBounds && characterBottom <= platformTop + 5) {
+            return; // Skip this platform
+        }
+
+        if (isWithinHorizontalBounds && isLandingOnPlatform && isFalling) {
+            posY = platformTop - character.clientHeight; // Snap character to platform
+            velocityY = 0; // Stop vertical movement
+            isJumping = false; // Allow jumping again
+            onPlatform = true;
         }
     });
 
@@ -168,34 +150,41 @@ function updateCharacter() {
 
 document.addEventListener('keydown', (event) => {
     switch (event.key.toLowerCase()) {
-        case 'a':
         case 'arrowleft':
+        case 'a':
             keys.left = true;
             break;
-        case 'd':
         case 'arrowright':
+        case 'd':
             keys.right = true;
             break;
-        case ' ':
-        case 'w':
         case 'arrowup':
+        case 'w':
             if (!isJumping) {
                 velocityY = jumpStrength;
                 isJumping = true;
             }
+            break;
+        case 'arrowdown':
+        case 's':
+            keys.down = true;
             break;
     }
 });
 
 document.addEventListener('keyup', (event) => {
     switch (event.key.toLowerCase()) {
-        case 'a':
         case 'arrowleft':
+        case 'a':
             keys.left = false;
             break;
-        case 'd':
         case 'arrowright':
+        case 'd':
             keys.right = false;
+            break;
+        case 'arrowdown':
+        case 's':
+            keys.down = false;
             break;
     }
 });
