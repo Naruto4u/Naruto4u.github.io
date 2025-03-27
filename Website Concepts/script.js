@@ -22,15 +22,16 @@ const keys = {
 };
 
 function updateCamera() {
-    const halfContainer = gameContainer.clientWidth / 2;
-    const targetX = -posX + halfContainer;
-    cameraX = targetX;
+    const halfContainerHeight = gameContainer.clientHeight / 2;
+    const targetY = -posY + halfContainerHeight;
+    let cameraY = targetY;
 
-    // Limit camera scrolling
-    const maxScroll = -(gameArea.clientWidth - gameContainer.clientWidth);
-    cameraX = Math.min(0, Math.max(maxScroll, cameraX));
+    // Limit camera scrolling to the bounds of the game area
+    const maxScrollY = -(gameArea.clientHeight - gameContainer.clientHeight);
+    cameraY = Math.min(0, Math.max(maxScrollY, cameraY));
 
-    gameArea.style.transform = `translate3d(${cameraX}px, 0, 0)`;
+    // Apply vertical scrolling
+    gameArea.style.transform = `translate3d(0, ${cameraY}px, 0)`;
 }
 
 function checkPlatformCollisions() {
@@ -130,16 +131,26 @@ function updateCharacter() {
     posX += velocityX;
     posY += velocityY;
 
-    // Check warp collisions
-    checkWarpCollisions();
+    // Prevent the character from going off-screen horizontally
+    const maxX = gameArea.clientWidth - character.clientWidth;
+    if (posX < 0) {
+        posX = 0;
+        velocityX = 0;
+    } else if (posX > maxX) {
+        posX = maxX;
+        velocityX = 0;
+    }
 
-    // Ground collision
+    // Prevent the character from falling below the bottom of the game area
     const maxY = gameArea.clientHeight - character.clientHeight;
     if (posY >= maxY) {
         posY = maxY;
         velocityY = 0;
         isJumping = false;
     }
+
+    // Check warp collisions
+    checkWarpCollisions();
 
     // Update character position
     character.style.transform = `translate(${posX -100}px, ${posY}px)`;

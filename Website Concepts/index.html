@@ -7,21 +7,11 @@
     <title>Character Navigation</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div id="gameContainer">
-        <div id="gameArea">
-            <div id="platforms">
+<body id="gameContainer">
                 <!-- Initial platforms with fixed positions -->
                 <div class="platform" style="background-color:rgb(0, 179, 0); width: 100px; height:20px; left: 100px; top: 300px;"></div>
-                <div class="platform" style="background-color:rgb(0, 179, 0); width: 1000px; height:20px; left: 500px; top: 250px;"></div>
-                <div class="platform" style="background-color:rgb(0, 179, 0); width: 100px; height:20px; left: 700px; top: 350px;"></div>
-                <div class="platform" style="background-color:rgb(0, 179, 0); width: 100px; height:20px; left: 1000px; top: 200px;"></div>
-                <div class="platform" style="background-color:rgb(0, 179, 0); width: 100px; height:20px; left: 1300px; top: 300px;"></div>
-            </div>
             <div id="character"></div>
-        </div>
-    </div>
-    
+
     <!-- Message box for small screens -->
     <div class="message-box">
         Please view on a larger screen
@@ -37,10 +27,10 @@
         
         <!-- Sidebar links-->
         <nav>
-          <a class="top-sites" href="Certifications/index.html">Certifications</a>
-          <a class="top-sites" href="Projects/index.html">Projects</a>
+          <a class="top-sites" href="#">Certifications</a>
+          <a class="top-sites" href="#">Projects</a>
           <a class="top-sites" href="#">Resume</a>
-          <a class="top-sites" href="Website Concepts\index.html">Website Concepts</a>
+          <a class="top-sites" href="#">Website Concepts</a>
           
         </nav>
         
@@ -59,12 +49,14 @@
       <button style="transform:translate(16px,0px);" class="show-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='flex'">Show</button>
       
       <!-- Main page content -->
-      <div class="main-box">
-        <div class="main-field">
-          <h1 class="main-text">Portfolio</h1>
-          <hr/>
-          <p class="main-paragraph"> Aspiring technology enthusiast interested in learning as much as possible.</p>
-          <div style="margin:10px 10px 10px 10px; width:95%; height:100px; display:flex; flex-wrap:wrap;"></div>
+      <div id="gameArea">
+        <div class="main-box">
+          <div class="main-field">
+            <h1 class="main-text">Portfolio</h1>
+            <hr/>
+            <p class="main-paragraph platform"> Aspiring technology enthusiast interested in learning as much as possible.</p>
+            <div style="margin:10px 10px 10px 10px; width:95%; height:100px; display:flex; flex-wrap:wrap;"></div>
+          </div>
         </div>
       </div>
       
