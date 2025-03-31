@@ -172,7 +172,7 @@ footer {padding:10px;text-align:center;color:white;font-size:17px}
 
 #gameArea {
   width: 100%;
-  height: 200%;
+  height: 100vh;
   transform-origin: 0 0;
 }
 

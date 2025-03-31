@@ -70,7 +70,6 @@ hr {
 
 
 .main-paragraph {
-  text-indent: 40px;
   padding: 50px;
   margin-top: 0px;
   line-height:1.7;
@@ -125,22 +124,33 @@ hr {
 a:hover {color:white;}
 
 .bottom-sites {
-  display: flex;
+  display: relative;
   justify-content: center;
   margin-top: auto;
   margin-bottom: 20px;
 }
 
 .website-link {
-  margin: 10px;
+  margin-right: 10px;
+  margin-bottom:10px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
 }
 
 .website-link img {
-  max-width: 50px;
-  max-height: 50px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
   border: 2px solid white;
   border-radius: 20px;
+}
 
+
+
+.website-link::after {
+  content: none !important;
 }
 
 button {
