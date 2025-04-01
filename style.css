@@ -125,7 +125,7 @@ a:hover {color:white;}
 
 .bottom-sites {
   display: relative;
-  justify-content: center;
+  text-align: center;
   margin-top: auto;
   margin-bottom: 20px;
 }
@@ -133,6 +133,7 @@ a:hover {color:white;}
 .website-link {
   margin-right: 10px;
   margin-bottom:10px;
+  border-radius:20px;
   display: inline-block;
   position: relative;
   text-decoration: none;
@@ -146,8 +147,6 @@ a:hover {color:white;}
   border: 2px solid white;
   border-radius: 20px;
 }
-
-
 
 .website-link::after {
   content: none !important;

@@ -4,6 +4,7 @@ const modalImg = document.getElementById("modalImage");
 const closeBtn = document.getElementsByClassName("close")[0];
 const images = document.querySelectorAll(".image-link img");
 
+
 // Add click event to all images
 images.forEach(img => {
     img.addEventListener("click", function(e) {
