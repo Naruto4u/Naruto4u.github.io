@@ -1,20 +1,18 @@
-* {
+*:not(.sidebar):not(.sidebar *):not(.show-sidebar):not(body) {
     border: 1px solid black;
-    box-sizing: content-box;
+    box-sizing:border-box;
 }
 
-html {
+html, body {
   background:linear-gradient(to bottom,darkblue 5%, lightblue 90%, rgb(206, 206, 206) 100%);
   width: 100vw;
   height:100vh;
   overflow:hidden;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align: center;
 }
 
-body {
+
+
+.item-body {
     height:95%;
     width:95%;
     background-color:rgb(173, 173, 173);
@@ -23,25 +21,31 @@ body {
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
+    text-align: center;
+    overflow-y: auto;
 }
 
-body div {
+.cert-box-container {
     display:flex;
     justify-content:center;
     align-items:center;
     height:200px;
     width:280px;
-    margin:30px;
+    min-width:250px;
+    margin:15px;
     border-radius: 25px;
+    left:0;
+    top:0;
 }
 
-body div a {
+.cert-box{
     width: 100%;
     max-width: 350px;
     height: 100%;
     object-fit: cover;
     border-radius: 25px;
 }
+
 body div img {
     width: 100%;
     max-width: 350px;
@@ -84,3 +88,99 @@ body div img {
 .close:hover {
     color: #999;
 }
+   
+  .show-sidebar {
+    width:50px;
+    height:40px;
+    border-radius:100px;
+    position:absolute;
+    left:120px;
+    position: absolute;
+    z-index:1
+  }
+  
+  .hide-sidebar {
+    width:50px;
+    height:40px;
+    border-radius:100px;
+    position:absolute;
+    margin-left:100%;
+  }
+  
+  .sidebar {
+    background-color: #333333;
+    color: white;
+    height: 100vh;
+    width: 176px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    position: fixed;
+    overflow: hidden;
+    left:0;
+    top:0;
+    z-index:2;
+  }
+  
+  .top-sites {color:rgb(85, 204, 255);
+    margin-bottom: 10px;
+    padding:2px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background-color: #545454;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  a:hover {color:white;}
+  
+  .bottom-sites {
+    display: relative;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    text-align:center;
+  }
+  
+  .website-link {
+    margin-right: 10px;
+    margin-bottom:10px;
+    border-radius:20px;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .website-link img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 20px;
+  }
+  
+  .website-link::after {
+    content: none !important;
+  }
+  
+  button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-height: 20%;
+    max-width: 50px;
+    z-index:1;
+  }
+  
+  .sidebar h2 {
+    margin-top: 50px;
+    margin-bottom:20px;
+    text-align: center;
+  }
+  
+  footer {padding:10px;text-align:center;color:white;font-size:17px}
+  
