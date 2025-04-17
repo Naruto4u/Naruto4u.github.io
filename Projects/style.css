@@ -1,4 +1,4 @@
-* :not(.sidebar):not(.sidebar *) {
+* :not(.sidebar):not(.sidebar *):not(.show-sidebar):not(.hide) {
   border: black solid 1px;
   box-sizing: border-box;
   margin: 0;
@@ -27,7 +27,7 @@ html, body {
   justify-content: space-evenly;
   }
 
-.main-content div {
+.main-content div{
   min-width:170px;
   max-width: 170px;;
   display: flex;
@@ -36,17 +36,6 @@ html, body {
   border-radius: 20px;
   height:18%;
 }
-
-.main-content p {
-  display: inline-block; 
-  width: 20%;
-  vertical-align: top;
-  margin-left: 10px;
-  text-align: left;
-}
-
-
-
 
 /* Sidebar styles */
 
