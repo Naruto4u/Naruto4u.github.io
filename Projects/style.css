@@ -15,21 +15,37 @@ html, body {
   align-items: center;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+
+}
+
+.stopper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background-color: red;
+  width: 250px;
+  height:100px;
+  text-align: center;
+  font-size:40px;
+  font-weight:bold;
+  color: white;
+  border-radius: 10px;
 }
 
 .main-content {
-  position: relative;
-  background-color:rgb(173, 173, 173);
-  height: 90%;
-  width: 80%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  }
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  filter: blur(3px);
+}
 
-.main-content div{
-  min-width:170px;
-  max-width: 170px;;
+.small-content{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +53,27 @@ html, body {
   height:18%;
 }
 
-/* Sidebar styles */
+.flex-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: flex-start; /* Align items horizontally */
+  margin-bottom: 20px; /* Add spacing between rows */
+  background-color:rgb(173, 173, 173);
+  height: 90%;
+}
+
+.textbox {
+  margin-left: 20px; /* Add spacing between the project and textbox */
+  font-size: 16px;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  flex-grow: 1; /* Allow the textbox to take up remaining space */
+}
+
+
+/*       Sidebar styles      */
 
 .show-sidebar {
   width:50px;
@@ -55,6 +91,7 @@ html, body {
   border-radius:100px;
   position:absolute;
   margin-left:100%;
+  z-index:2
 }
 
 .sidebar {
@@ -85,45 +122,45 @@ html, body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-  a:hover {color:white;}
+a:hover {color:white;}
   
-  .bottom-sites {
+.bottom-sites {
     display: relative;
     text-align: center;
     margin-top: auto;
     margin-bottom: 20px;
-  }
+}
   
-  .website-link {
+.website-link {
     margin-right: 10px;
     margin-bottom:10px;
     border-radius:20px;
     display: inline-block;
     position: relative;
     text-decoration: none;
-  }
-  
-  .website-link img {
+}
+
+.website-link img {
     display: block;
     width: 50px;
     height: 50px;
     object-fit: cover;
     border: 2px solid white;
     border-radius: 20px;
-  }
-  
-  button {
+}
+
+button {
     position: absolute;
     top: 10px;
     right: 10px;
     max-height: 20%;
     max-width: 50px;
     z-index:1;
-  }
-  
-  .sidebar h2 {
+}
+
+.sidebar h2 {
     margin-top: 50px;
     margin-bottom:20px;
     text-align: center;
-  }
+}
   

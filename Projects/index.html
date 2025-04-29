@@ -8,79 +8,88 @@
 </head>
 <body>
 
-<!-- Sidebar -->
- 
-    <div class="sidebar" id="sidebar" style="display:none;">
-      
-        <button class="hide-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='none'">Hide</button>
+  <div class="stopper">Page is under development</div>
 
-        <h2>Website Subdivisions</h2>
-        
+<!-- Sidebar -->
+<button style="transform:translate(16px,0px);" class="show-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='flex'">Show</button>
+  <div class="sidebar" id="sidebar">
+    
+      <button class="hide-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='none'">Hide</button>
+
+      <h2>Website Subdivisions</h2>
+      
 <!-- Sidebar links-->
 
-        <nav>
-          <a class="top-sites" href="\index.html">Home</a>
-          <a class="top-sites" href="\Certifications\index.html">Certifications</a>
-          <a class="top-sites" href="\Projects/index.html">Projects</a>
-          <a class="top-sites" href="#">Resume</a>          
-        </nav>
-        
+      <nav>
+        <a class="top-sites" href="\index.html">Home</a>
+        <a class="top-sites" href="\Certifications\index.html">Certifications</a>
+        <a class="top-sites" href="\Projects/index.html">Projects</a>
+        <a class="top-sites" href="#">Resume</a>          
+      </nav>
+      
 <!-- Sidebar footer -->
 
-        <nav class="bottom-sites">
-          
-          <a class="website-link" href="mailto:joedanik@gmail.com" target="_blank">
-            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F12%2FGmail-Logo-PNG-Images.png&f=1&nofb=1&ipt=bf479116bfede346e1f8a0e3daed380bfd07a4e4f28f4f87e6bdfaf9c9f9474c" alt="Email" />
-          </a>
-  
-          <a class="website-link">
-            <img src="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" alt="" style="width:50px; height:50px; visibility:hidden;" />
-          </a>
-          
-          <a class="website-link" href="https://github.com/Naruto4u/Naruto4u.github.io" target="_blank">
-            <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Github-Dark.svg" alt="GitHub" />
-          </a>
-          
-          <a class="website-link" href="https://www.linkedin.com/in/joseph-danik" target="_blank">
-            <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/LinkedIn.svg" alt="LinkedIn" />
-          </a>
+      <nav class="bottom-sites">
         
-        </nav>
-      </div>
-  
-      <button style="transform:translate(16px,0px);" class="show-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='flex'">Show</button>
-    
-  <!-- project boxes -->
+        <a class="website-link" href="mailto:joedanik@gmail.com" target="_blank">
+          <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pngall.com%2Fwp-content%2Fuploads%2F12%2FGmail-Logo-PNG-Images.png&f=1&nofb=1&ipt=bf479116bfede346e1f8a0e3daed380bfd07a4e4f28f4f87e6bdfaf9c9f9474c" alt="Email" />
+        </a>
 
-    <div class="main-content">
-      <div class="project-wrapper">
-        <div class="mini-container">
-          <h1>Project A</h1>
-        </div>
-        <p class="text-box">test A</p>
-      </div>
+        <a class="website-link" href="https://www.codewars.com/users/Naruto4u" target="_blank">
+          <img src="\Resources\codewars.png" alt="" style="width:50px; height:50px;"/>
+        </a>
+
+        <a class="website-link" href="https://github.com/Naruto4u/Naruto4u.github.io" target="_blank">
+          <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/Github-Dark.svg" alt="GitHub" />
+        </a>
+        
+        <a class="website-link" href="https://www.linkedin.com/in/joseph-danik" target="_blank">
+          <img src="https://raw.githubusercontent.com/tandpfun/skill-icons/65dea6c4eaca7da319e552c09f4cf5a9a8dab2c8/icons/LinkedIn.svg" alt="LinkedIn" />
+        </a>
       
-        <hr>
-      <div>
-          <h1>Project B</h1>
+      </nav>
+  </div>
+
+
+<!-- Main Content -->
+  <div class="main-content">
+    
+    <!-- project boxes -->
+    <div class="flex-container">
+      <div class="small-content">
+        <h1>Project A</h1>
       </div>
-      <p style="position:absolute;top:230px;left:200px">test B</p>
-      <hr>
-      <div> 
-          <h1>Project C</h1>
-      </div>
-      <p style="position:absolute;top:400px;left:200px">test C</p>
-      <hr>
-      <div> 
-          <h1>Project D</h1>
-      </div>
-      <p style="position:absolute;top:550px;left:200px">test D</p>
-      <hr>
-      <div>
-          <h1>Project E</h1>
-      </div>
-      <p style="position:absolute;top:720px;left:200px">test E</p>
+      <p class="textbox">test A</p>
     </div>
+    
+    <div class="flex-container">
+      <div class="small-content">
+        <h1>Project B</h1>
+      </div>
+      <p class="textbox">test B</p>
+    </div>
+    
+    <div class="flex-container">
+      <div class="small-content">
+        <h1>Project C</h1>
+      </div>
+      <p class="textbox">test C</p>
+    </div>
+    
+    <div class="flex-container">
+      <div class="small-content">
+        <h1>Project D</h1>
+      </div>
+      <p class="textbox">test D</p>
+    </div>
+    
+    <div class="flex-container">
+      <div class="small-content">
+        <h1>Project E</h1>
+      </div>
+      <p class="textbox">test E</p>
+    </div>
+  </div>
     <footer>
 </body>
 </html>
