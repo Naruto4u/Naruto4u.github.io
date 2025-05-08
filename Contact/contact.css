@@ -5,6 +5,8 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-y: auto;
+    display:flex;
+    flex-direction:column;
   }
   
   hr {
@@ -16,10 +18,10 @@ html, body {
   }
   
   .main-box {
-    height:85%;
     position:center;
     text-align:center;
-    max-width: 50%;
+    width:85%;
+    height:78%;
     background-color: white;
     margin: auto;
     padding-top: 100px;
@@ -34,6 +36,20 @@ html, body {
     background-color:white;
 }
 
+.contact-form label, h2{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin:10px 2px 2px 2px;
+}
+
+#send-button {
+  position:relative;
+  height:40px;
+  min-width:110px;
+  left:0;
+  top:5px;
+}
 
   .show-sidebar {
     width:50px;
@@ -127,4 +143,5 @@ html, body {
     margin-bottom:20px;
     text-align: center;
   }
-    
+  
+  footer {padding:10px;text-align:center;color:white;font-size:17px;font-weight:bold;}

@@ -7,6 +7,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-y: auto;
+  display:flex;
+  flex-direction:column;
 }
 
 hr {
@@ -46,7 +48,8 @@ hr {
 
 .main-box {
   min-height:100%;
-  max-width: 50%;
+  width:50%;
+  max-width: 960px;
   background-color: white;
   margin: auto;
   padding-top: 100px;
@@ -78,8 +81,8 @@ hr {
 }
 
 .show-sidebar {
-  width:50px;
-  height:40px;
+  min-width:50px;
+  min-height:40px !important;
   border-radius:100px;
   position:absolute;
   left:120px;
@@ -107,7 +110,6 @@ hr {
   justify-content: flex-start;
   padding: 10px;
   position: fixed;
-  overflow: hidden;
   z-index:2;
 }
 
@@ -170,4 +172,4 @@ button {
   text-align: center;
 }
 
-footer {padding:10px;text-align:center;color:white;font-size:17px}
+footer {padding:10px;text-align:center;color:white;font-size:17px;font-weight:bold;}

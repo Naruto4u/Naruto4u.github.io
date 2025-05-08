@@ -1,26 +1,28 @@
-*:not(.sidebar):not(.sidebar *):not(.show-sidebar):not(body) {
-    border: 1px solid black;
-    box-sizing:border-box;
-}
+
 
 html, body {
   background:linear-gradient(to bottom,darkblue 5%, lightblue 90%, rgb(206, 206, 206) 100%);
   width: 100vw;
   height:100vh;
-  overflow:hidden;
-}
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  }
 
 .item-body {
-    height:95%;
+    top:20px;
+    height:90%;
     width:95%;
+    max-width:960px;
     background-color:rgb(173, 173, 173);
-    margin:14px;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    text-align: center;
     overflow-y: auto;
+    border-radius:5px;
+    position:absolute;
 }
 
 .cert-box-container {
@@ -34,6 +36,8 @@ html, body {
     border-radius: 25px;
     left:0;
     top:0;
+    border: 3px solid black;
+    box-sizing:border-box;
 }
 
 .cert-box{
@@ -180,5 +184,4 @@ body div img {
     text-align: center;
   }
   
-  footer {padding:10px;text-align:center;color:white;font-size:17px}
-  
+  footer {text-align:center;color:white;font-size:17px;font-weight:bold;margin-top:auto;}  

@@ -16,6 +16,8 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  display:flex;
+  flex-direction:column;
 
 }
 
@@ -163,4 +165,5 @@ button {
     margin-bottom:20px;
     text-align: center;
 }
-  
+
+footer {padding:10px;text-align:center;color:white;font-size:17px;font-weight:bold;}

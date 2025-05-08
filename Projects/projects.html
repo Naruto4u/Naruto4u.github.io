@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            Certifications
-        </title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-      
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projects.css"/>
+    <title>Projects</title>
+</head>
+  <body>
+
+    <div class="stopper">Page is under development</div>
+
       <!-- Sidebar -->
       <button style="transform:translate(16px,0px);" class="show-sidebar" type="button" onclick="document.getElementById('sidebar').style.display='flex'">Show</button>
       <div class="sidebar" id="sidebar">
@@ -18,15 +18,16 @@
 
         <h2>Website Subdivisions</h2>
         
-  <!-- Sidebar links-->
+        <!-- Sidebar links-->
 
         <nav>
           <a class="top-sites" href="\index.html">Home</a>
-          <a class="top-sites" href="\Certifications\index.html">Certifications</a>
-          <a class="top-sites" href="\Projects/index.html">Projects</a>
-          <a class="top-sites" style="display:none;" href="#">Resume</a>          
+          <a class="top-sites" href="\Certifications\certifications.html">Certifications</a>
+          <a class="top-sites" href="\Projects\projects.html">Projects</a>
+          <a class="top-sites" style="display:none;" href="#">Resume</a>
+          <a class="top-sites" href="\Contact\contact.html">Contact</a>        
         </nav>
-        
+          
   <!-- Sidebar footer -->
 
         <nav class="bottom-sites">
@@ -50,36 +51,49 @@
         </nav>
       </div>
 
-      <div class="item-body">
+  <!-- Main Content -->
+    <div class="main-content">
       
-
-          <!-- Modal container -->
-          <div id="imageModal" class="modal">
-              <span class="close">&times;</span>
-              <img class="modal-content" id="modalImage">
-          </div>
-          
-          <div class="cert-box-container"> 
-              <a href="#" class="image-link cert-box">
-                  <img src="\Resources\Python Certification.png" alt="Python Certification">
-              </a>
-          </div>
-          
-          <div class="cert-box-container">
-              <a href="#" class="image-link cert-box">
-                  <img src="\Resources\HTML CSS Certification.png" alt="HTML CSS Certification">
-              </a>
-          </div>
-
-          <div class="cert-box-container">
-            <a href="#" class="image-link cert-box">
-                <img src="\Resources\Networking Cert.png" alt="Networking Certification">
-            </a>
+      <!-- project boxes -->
+      <div class="flex-container">
+        <div class="small-content">
+          <h1>Project A</h1>
         </div>
-
-          <div class="cert-box-container"><h1>Coming eventually</h1></div>
-
-          <script src="script.js"></script>
+        <p class="textbox">test A</p>
+      </div>
+      
+      <div class="flex-container">
+        <div class="small-content">
+          <h1>Project B</h1>
         </div>
-    </body>
+        <p class="textbox">test B</p>
+      </div>
+      
+      <div class="flex-container">
+        <div class="small-content">
+          <h1>Project C</h1>
+        </div>
+        <p class="textbox">test C</p>
+      </div>
+      
+      <div class="flex-container">
+        <div class="small-content">
+          <h1>Project D</h1>
+        </div>
+        <p class="textbox">test D</p>
+      </div>
+      
+      <div class="flex-container">
+        <div class="small-content">
+          <h1>Project E</h1>
+        </div>
+        <p class="textbox">test E</p>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024-2025 Joseph Danik. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
