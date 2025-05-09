@@ -1,5 +1,5 @@
 html, body {
-    background: linear-gradient(to bottom, rgb(105, 60, 177), black);
+    background: linear-gradient(to bottom, rgb(175, 165, 190), black);
     height: 100vh;
     max-width: 100vw;
     margin: 0;
@@ -18,23 +18,23 @@ html, body {
   }
   
   .main-box {
-    position:center;
     text-align:center;
-    width:85%;
-    height:78%;
+    width:50%;
     background-color: white;
-    margin: auto;
+    margin: 35px auto;
     padding-top: 100px;
     border-radius: 10px;
-    place-items: center;
+    min-height:100vh;
+    
   }
-
+  
 .contact-container {
     border: 2px solid black;
     width:200px;
     height:300px;
     background-color:white;
-}
+    margin: auto;
+  }
 
 .contact-form label, h2{
     display: block;

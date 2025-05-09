@@ -1,7 +1,7 @@
 
 
 html, body {
-  background:linear-gradient(to bottom,darkblue 5%, lightblue 90%, rgb(206, 206, 206) 100%);
+  background:linear-gradient(to bottom,rgb(56, 56, 168) 5%, lightblue 90%, rgb(206, 206, 206) 100%);
   width: 100vw;
   height:100vh;
   display:flex;
@@ -11,11 +11,10 @@ html, body {
   }
 
 .item-body {
-    top:20px;
     height:90%;
-    width:95%;
+    width:50%;
     max-width:960px;
-    background-color:rgb(173, 173, 173);
+    background-color:white;
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
@@ -28,14 +27,13 @@ html, body {
 .cert-box-container {
     display:flex;
     justify-content:center;
+    text-align:center;
     align-items:center;
     height:200px;
     width:280px;
     min-width:250px;
     margin:15px;
     border-radius: 25px;
-    left:0;
-    top:0;
     border: 3px solid black;
     box-sizing:border-box;
 }
