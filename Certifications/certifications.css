@@ -34,17 +34,9 @@ html, body {
     width:280px;
     min-width:250px;
     margin:15px;
-    border-radius: 25px;
+    border-radius: 30px;
     border: 3px solid black;
     box-sizing:border-box;
-}
-
-.cert-box{
-    width: 100%;
-    max-width: 350px;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
 }
 
 body div img {
