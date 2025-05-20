@@ -66,6 +66,24 @@ hr {
   text-align:center;
 }
 
+.show-sidebar {
+  width:50px;
+  height:40px;
+  border-radius:100px;
+  position:absolute;
+  left:120px;
+  position: absolute;
+  z-index:1
+}
+
+.hide-sidebar {
+  width:50px;
+  height:40px;
+  border-radius:100px;
+  position:absolute;
+  margin-left:100%;
+}
+
 .sidebar {
   background-color: #333333;
   color: white;
@@ -73,14 +91,13 @@ hr {
   width: 176px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   padding: 10px;
   position: fixed;
-}
-
-.sidebar h2 {
-  margin-top: 50px;
-  margin-bottom:20px;
-  text-align: center;
+  overflow: hidden;
+  left:0;
+  top:0;
+  z-index:2;
 }
 
 .top-sites {color:rgb(85, 204, 255);
@@ -128,17 +145,67 @@ a:hover {color:white;}
 }
 
 button {
+  position: absolute;
   top: 10px;
   right: 10px;
-  width:50px;
-  height:40px;
-  border-radius:100px;
-  position:absolute;
-
+  max-height: 20%;
+  max-width: 50px;
+  z-index:1;
 }
 
-.show-sidebar {
-  left:135px;
+.sidebar h2 {
+  margin-top: 50px;
+  margin-bottom:20px;
+  text-align: center;
 }
 
 footer {padding:10px;text-align:center;color:white;font-size:17px;font-weight:bold;}
+
+/* Page specific Styles */
+
+/* Start - Certifications page */
+
+.cert-body {
+  background:linear-gradient(to bottom,rgb(84, 84, 207), black);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.main-body {
+  margin: 35px auto;
+  width:50%;
+  background-color:white;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  overflow-y: auto;
+  border-radius: 10px;
+  min-height:100vh;
+}
+
+.cert-box-container {
+  display:flex;
+  justify-content:center;
+  text-align:center;
+  align-items:center;
+  height:200px;
+  width:280px;
+  min-width:250px;
+  margin:15px;
+  border-radius: 30px;
+  border: 3px solid black;
+  box-sizing:border-box;
+}
+
+.main-body img {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* Projects page */
+

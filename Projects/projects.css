@@ -12,14 +12,6 @@ html, body {
   
 }
 
-hr {
-  height: 4px;
-  background-color: navy;
-  border-color: navy;
-  border-width: 2px;
-  max-width: 90%;
-}
-
 .message-box {
   display:none;
 }
